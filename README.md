@@ -124,11 +124,34 @@ The application will be accessible at `http://localhost:5173`.
 - `DELETE /api/tasks/:id` – Delete a task by ID
 *Note: All task routes require a valid JWT token in the `Authorization` header.*
 ---
+
+## 🩺 Health Check Endpoint
+
+The backend exposes a health check endpoint to verify server and database status.  
+This is useful for monitoring, debugging, and deployment readiness checks.
+
+### Endpoint
+- `GET /api/health`
+### Description
+- Confirms that the backend server is running
+- Reports database connection status
+- Provides uptime and timestamp
+
+### Sample Response
+```json
+{
+  "status": "ok",
+  "uptime": 245.32,
+  "timestamp": "2026-01-31T10:15:22.123Z",
+  "database": "connected"
+}
+```
+---
+
 ## 🌐 Deployment
 
-- Backend can be deployed on platforms like Heroku, Vercel, or DigitalOcean.
-- Frontend can be deployed on platforms like Vercel, Netlify, or GitHub Pages.
-- Ensure environment variables are set correctly in the deployment environment. 
+- Backend: https://taskflow-0xfs.onrender.com
+- Frontend: https://task-flow-five-pi.vercel.app
 ---
 
 ## 👤 Author
