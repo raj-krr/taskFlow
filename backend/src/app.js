@@ -8,7 +8,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://task-flow-five-pi.vercel.app",
+    origin: [
+      "https://task-flow-five-pi.vercel.app",
+      "http://localhost:5173",
+    ],
     credentials: true,
   })
 );
